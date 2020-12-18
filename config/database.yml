@@ -21,4 +21,3 @@ production:
   database: digihai_production
   username: digihai
   password: <%= ENV['DIGIHAI_DATABASE_PASSWORD'] %>
-  
