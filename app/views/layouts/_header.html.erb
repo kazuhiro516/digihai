@@ -18,6 +18,11 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#">LOGIN</a>
         </li>
+        <li class="nav-item">
+          <% if user_signed_in? %>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </nav>

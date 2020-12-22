@@ -12,9 +12,12 @@
     <![endif]-->
   </head>
   <body>
-    <%= render 'layouts/header' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <div id="wrapper">
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/flash' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </div>
   </body>
 </html>
