@@ -15,7 +15,9 @@
     <div id="wrapper">
       <%= render 'layouts/header' %>
       <%= render 'layouts/flash' %>
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
       <%= render 'layouts/footer' %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     </div>
