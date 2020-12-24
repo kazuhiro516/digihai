@@ -18,4 +18,7 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
+
+  #アップローダーを紐付け
+  mount_uploader :image, ImageUploader
 end
