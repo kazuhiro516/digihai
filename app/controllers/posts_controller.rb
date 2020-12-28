@@ -21,6 +21,10 @@ class PostsController < ApplicationController
     @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC')
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   private
   #外部に公開する必要のない属性まで誤って公開してしまうのを防ぐため
     def post_params
