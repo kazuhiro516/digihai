@@ -31,7 +31,7 @@
 
 .comment {
   margin-left: 8px;
-  background-image: image-url("parts6.png");
+  background-image: image-url("parts6");
   background-repeat: no-repeat;
   height: 36px;
   width: 36px;
@@ -79,4 +79,14 @@
   display: flex;
   align-items: center;
   line-height: 0;
+}
+
+.delete-post-icon {
+  background-image: image-url("parts9");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 20px !important;
+  color: #262626;
+  font-size: 20px;
 }
