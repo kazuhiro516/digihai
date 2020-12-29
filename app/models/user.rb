@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many  :posts, dependent: :destroy
+  has_many  :likes
   validates :name, presence: true, length: { maximum: 60 }
 
   #ユーザー体験を向上させるためパスワードの入力を省略
