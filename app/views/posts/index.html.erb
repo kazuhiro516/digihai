@@ -6,9 +6,9 @@
           <%= link_to user_path(post.user), class: "no-text-decoration" do %>
             <%= image_tag avatar_url(post.user), class: "post-profile-icon" %>
           <% end %>
-          <%= link_to user_path(post.user), class: "black-color no-text-decoration",
-            title: post.user.name do %>
-            <strong><%= post.user.name %></strong>
+          <%= link_to post_path(post), class: "black-color no-text-decoration font-weight-light",
+            title: post.title do %>
+            <h2><%= post.title %></h2>
           <% end %>
           <% if post.user_id == current_user.id %>
             <%= link_to post_path(post), method: :delete, class: "ml-auto mx-0 my-auto" do %>
@@ -28,17 +28,16 @@
                 <%= link_to "お気に入り", post_likes_path(post), method: :POST, remote: true, class: "love hide-text" %>
               <% end %>
             </div>
-            <%= link_to "", "#", class: "comment" %>
           </div>
             <div id="like-text-post-<%= post.id.to_s %>">
               <%= render "like_text", { likes: post.likes } %>
             </div>
           <div>
-            <span><strong><%= post.user.name %></strong></span>
-            <span><%= post.content %></span>
             <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "post-time no-text-decoration" %>
             <hr>
+            <h3>【募集要項】</h3>
             <div class="row parts">
+              <span><%= post.content %></span>
               <form action="#" class="w-100">
                 <div>
                   <textarea class="form-control comment-input border-0" placeholder="コメント..." rows="1"></textarea>
