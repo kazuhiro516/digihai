@@ -66,3 +66,5 @@ gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem 'dotenv-rails'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
