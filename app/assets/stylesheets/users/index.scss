@@ -1,0 +1,14 @@
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #dddddd;
+  }
+  .round-img{
+    border-radius:50%;
+    width: 60px;
+    height: 60px;
+  }
+}

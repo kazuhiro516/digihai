@@ -11,7 +11,7 @@
             <h2><%= post.title %></h2>
           <% end %>
           <% if post.user_id == current_user.id %>
-            <%= link_to post_path(post), method: :delete, class: "ml-auto mx-0 my-auto" do %>
+            <%= link_to post_path(post), method: :delete, class: "ml-auto mx-0 my-auto", data: { confirm: '本当に削除しますか？' } do %>
               <div class="delete-post-icon"></div>
             <% end %>
           <% end %>
@@ -38,11 +38,11 @@
             <h3>【募集要項】</h3>
             <div class="row parts">
               <span><%= post.content %></span>
-              <form action="#" class="w-100">
-                <div>
-                  <textarea class="form-control comment-input border-0" placeholder="コメント..." rows="1"></textarea>
-                </div>
-              </form>
+              <div class="show-btn">
+                <%= link_to(post_path(post)) do %>
+                  <button class="btn-gradient-radius">詳細を確認する</button>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
@@ -50,3 +50,6 @@
     </div>
   </div>
 <% end %>
+<div class="pagination justify-content-center my-5">
+  <%= paginate @posts %>
+</div>
