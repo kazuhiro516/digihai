@@ -38,6 +38,11 @@
             <h3>【募集要項】</h3>
             <div class="row parts">
               <span><%= post.content %></span>
+              <div class="show-btn">
+                <%= link_to(post_path(post)) do %>
+                  <button class="btn-gradient-radius">詳細を確認する</button>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>

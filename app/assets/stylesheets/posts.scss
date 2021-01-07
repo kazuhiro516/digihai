@@ -108,3 +108,26 @@
   text-indent: 110%;
   white-space: nowrap;
 }
+// 詳細ボタン
+.btn-gradient-radius {
+  display: inline-block;
+  margin:30px;
+  justify-content: center;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #11376b;
+  background-image: #11376b;
+}
+
+.btn-gradient-radius:hover {
+  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.btn-gradient-radius:focus{
+  outline: none;
+}
+
+.show-btn{
+  text-align: center;
+}
