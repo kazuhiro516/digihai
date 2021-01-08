@@ -1,14 +1,20 @@
-<div class="container">
-  <h1 class="text-center">すべてのユーザー</h1>
-  <ul class="users">
-    <% @users.each do |user| %>
-      <li>
-        <%= image_tag avatar_url(user), class: "round-img"%>
-        <%= link_to user.name, user %>
-      </li>
-    <% end %>
-  </ul>
-  <div class="pagination justify-content-center my-5">
-    <%= paginate @users %>
+<% @users.each do |user| %>
+  <div class="container">
+    <div class="card">
+      <ul class="users">
+          <li>
+            <%= image_tag avatar_url(user), class: "round-img"%>
+            <%= link_to user.name, user %>
+          </li>
+      </ul>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
   </div>
+<% end %>
+<div class="pagination justify-content-center my-5">
+  <%= paginate @users %>
 </div>
