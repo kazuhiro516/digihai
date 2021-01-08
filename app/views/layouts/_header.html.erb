@@ -1,17 +1,17 @@
 <header>
   <div class='headerSection'>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">DIGIHAI</a>
+    <nav class="navbar navbar-expand-lg navbar-light p-4 mx-5">
+      <%= link_to "DIGIHAI", root_path %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item nav-link">
-            <%= link_to 'TOP', root_path, class: 'nav-link' %>
+            <%= link_to 'ホーム', users_path, class: 'nav-link' %>
           </li>
           <li class="nav-item nav-link">
-            <%= link_to 'ABOUT', static_pages_about_path, class: 'nav-link' %>
+            <%= link_to 'DIGIHAIについて', static_pages_about_path, class: 'nav-link' %>
           </li>
           <li class="nav-item nav-link">
             <%= link_to '利用規約', static_pages_terms_path, class: 'nav-link' %>
@@ -21,7 +21,7 @@
                 <%= link_to 'プロフィール', user_path(current_user), class: 'nav-link' %>
             </li>
             <li class="nav-item nav-link">
-                <%= link_to 'すべてのユーザー', users_path, class: 'nav-link' %>
+                <%= link_to '登録ユーザー', users_path, class: 'nav-link' %>
             </li>
             <li class="nav-item nav-link">
                 <%= link_to '求人を投稿', new_post_path, class: 'nav-link' %>

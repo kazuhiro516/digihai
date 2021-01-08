@@ -23,9 +23,9 @@
           <div class="row parts">
             <div id="like-icon-post-<%= post.id.to_s %>">
               <% if post.liked_by(current_user).present? %>
-                <%= link_to "お気に入りを取り消す", post_like_path(post.id, post.liked_by(current_user)), method: :DELETE, remote: true, class: "loved hide-text" %>
+                <%= link_to "", post_like_path(post.id, post.liked_by(current_user)), method: :DELETE, remote: true, class: "loved hide-text" %>
               <% else %>
-                <%= link_to "お気に入り", post_likes_path(post), method: :POST, remote: true, class: "love hide-text" %>
+                <%= link_to "", post_likes_path(post), method: :POST, remote: true, class: "love hide-text" %>
               <% end %>
             </div>
           </div>
@@ -33,7 +33,6 @@
               <%= render "like_text", { likes: post.likes } %>
             </div>
           <div>
-            <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "post-time no-text-decoration" %>
             <hr>
             <h3>【募集要項】</h3>
             <div class="row parts">
