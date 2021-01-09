@@ -1,0 +1,19 @@
+<% @private_business_users.each do |private_business_user| %>
+  <div class="container">
+    <div class="card">
+      <ul class="users">
+          <li>
+            <h3><%= private_business_user.name %></h3>
+          </li>
+      </ul>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="pagination justify-content-center my-5">
+  <%= paginate @private_business_users %>
+</div>
