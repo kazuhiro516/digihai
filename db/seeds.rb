@@ -14,3 +14,9 @@ User.create!(name:  "Kurokawa Kazuhiro",
                password:              password,
                password_confirmation: password)
 end
+
+#private_business_userを作成する
+PrivateBusinessUser.create(name: "鈴木浩一")
+PrivateBusinessUser.create(name: "岩田りさ")
+PrivateBusinessUser.create(name: "古川岬")
+PrivateBusinessUser.create(name: "田辺健作")

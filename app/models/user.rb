@@ -3,6 +3,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many  :posts, dependent: :destroy
+  #reviewモデルにアソシエーションの設定
+  has_many  :reviews, dependent: :destroy
   has_many  :likes
   validates :name, presence: true, length: { maximum: 60 }
 
