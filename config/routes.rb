@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users,controllers: { registrations: 'registrations' }
-  root 'posts#index'
+  root 'private_business_users#index'
   get 'static_pages/about'
   get 'static_pages/terms'
-  resources :users, only: %i(index show)
-  resources :posts, only: %i(new create index show destroy) do
-    resources :photos, only: %i(create)
-    resources :likes,  only: %i(create destroy)
+  resources :users, only: [:index, :show]
+  resources :posts, only: [:new, :create, :index, :show, :destroy] do
+    resources :photos, only: [:create]
+    resources :likes,  only: [:create, :destroy]
+  end
+  resources :private_business_users, only: [:index, :show] do
+    resources :reviews, only: [:index, :create]
   end
 end

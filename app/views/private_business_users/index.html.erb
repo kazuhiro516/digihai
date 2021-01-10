@@ -7,9 +7,27 @@
           </li>
       </ul>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card-content">
+          <div class="content">
+            <div class="content average-score">
+              <div class="star-rating">
+                <div class="star-rating-front" style="width: <%= private_business_user.review_score_percentage %>%">★★★★★</div>
+                <div class="star-rating-back">★★★★★</div>
+              </div>
+              <div class="average-score-display ml-3 pt-2">
+                <%= private_business_user.avg_score %>点（<%= private_business_user.reviews.count %>件のレビュー）
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+          <%= link_to private_business_user_reviews_path(private_business_user), class: 'btn btn-primary btn-lg btn-block' do %>
+            レビューを見る
+          <% end %>
+          <%= link_to private_business_user_path(private_business_user), class: 'btn btn-primary btn-lg btn-block' do %>
+            レビューを投稿する
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

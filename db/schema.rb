@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_28_141954) do
+ActiveRecord::Schema.define(version: 2021_01_09_011210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,23 @@ ActiveRecord::Schema.define(version: 2020_12_28_141954) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "private_business_users", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "private_business_user_id", null: false
+    t.string "content"
+    t.integer "score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["private_business_user_id"], name: "index_reviews_on_private_business_user_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -60,4 +77,6 @@ ActiveRecord::Schema.define(version: 2020_12_28_141954) do
   add_foreign_key "likes", "users"
   add_foreign_key "photos", "posts"
   add_foreign_key "posts", "users"
+  add_foreign_key "reviews", "private_business_users"
+  add_foreign_key "reviews", "users"
 end

@@ -1,2 +1,22 @@
-<h1>PrivateBusinessUsers#show</h1>
-<p>Find me in app/views/private_business_users/show.html.erb</p>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2><%= @private_business_user.name %></h2>
+    </div>
+    <div class="card-body">
+      <div class="card-content">
+        <div class="content average-score">
+          <div class="star-rating mb-2">
+            <div class="star-rating-front" style="width: <%= @private_business_user.review_score_percentage %>%">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+          </div>
+          <div class="average-score-display ml-3 pt-2"><%= @private_business_user.avg_score %>点（<%= @private_business_user.reviews.count %>件のレビュー）
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'reviews/form', review: @review, private_business_user: @private_business_user %>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'private_business_users/reviews' %>

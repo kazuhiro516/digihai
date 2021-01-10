@@ -1,3 +1,39 @@
-// Place all the styles related to the private_business_users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// レビュー
+.star-rating {
+  position: relative;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ed9220;
+  margin-left: 10px;
+}
+.star-rating-back {
+  color: #ccc;
+  margin-left: 10px;
+}
+
+.average-score {
+  display: flex;
+}
+.average-score-display {
+  font-size: 16px;
+}
+
+.card{
+  white-space: nowrap;
+}
+
+.container {
+  margin: auto;
+  padding: 10px;
+}
+
+.users h3{
+  margin: 0;
+}
