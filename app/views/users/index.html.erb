@@ -1,3 +1,4 @@
+<% provide(:title, "採用担当者一覧") %>
 <% @users.each do |user| %>
   <div class="container">
     <div class="card">
@@ -10,7 +11,7 @@
       <div class="card-body">
         <div class="text-right">
           <%= link_to user_path(user.id), class: 'btn btn-primary btn-lg btn-block' do %>
-            プロフィール
+            <i class="fas fa-angle-double-right"></i>プロフィール
           <% end %>
         </div>
       </div>
