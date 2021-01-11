@@ -11,16 +11,17 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.photos.present?
       @post.save
-      redirect_to root_path
+      redirect_to posts_path
       flash[:notice] = "投稿が保存されました"
     else
-      redirect_to root_path
+      redirect_to posts_path
       flash[:alert] = "投稿に失敗しました"
     end
   end
 
   def index
-    @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC').page(params[:page]).per(3)
+    #N+1問題を解消するため、投稿に紐づくidを取得する処理
+    @posts = Post.includes(:photos, :user).order('created_at DESC').page(params[:page]).per(3)
   end
 
   def show
