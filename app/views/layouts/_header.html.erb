@@ -43,6 +43,9 @@
             <li class="nav-item nav-link">
               <%= link_to 'ログイン', new_user_session_path, class: 'nav-link' %>
             </li>
+            <li class="nav-item nav-link">
+              <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'nav-link border rounded' %>
+            </li>
           <% end %>
         </ul>
       </div>
