@@ -3,7 +3,8 @@ class Post < ApplicationRecord
   has_many   :photos, dependent: :destroy
   has_many   :likes, -> { order(created_at: :desc) }, dependent: :destroy
   accepts_nested_attributes_for :photos
-  default_scope -> { order(created_at: :desc) }
+  # プログラマが意図しないクエリの発行を防ぐため。
+  scope :post, -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :content, presence: true
 
