@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    #N+1問題を解消するため、投稿に紐づくidを取得する処理
+    # N+1問題を解消するため、投稿に紐づくidを取得する処理
     @posts = Post.includes(:photos, :user).order('created_at DESC').page(params[:page]).per(3)
   end
 
@@ -37,11 +37,14 @@ class PostsController < ApplicationController
   end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
-    end
-  #外部に公開する必要のない属性まで誤って公開してしまうのを防ぐため
-    def post_params
-      params.require(:post).permit(:content, :title, photos_attributes: [:image]).merge(user_id: current_user.id)
-    end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+  # 外部に公開する必要のない属性まで誤って公開してしまうのを防ぐため
+
+  def post_params
+    params.require(:post).permit(:content, :title, photos_attributes: [:image]).
+      merge(user_id: current_user.id)
+  end
 end

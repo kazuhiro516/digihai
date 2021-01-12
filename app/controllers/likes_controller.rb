@@ -9,7 +9,7 @@ class LikesController < ApplicationController
     end
   end
 
-   def destroy
+  def destroy
     @like = Like.find_by(id: params[:id])
     @post = @like.post
     if @like.destroy
@@ -18,7 +18,8 @@ class LikesController < ApplicationController
   end
 
   private
-    def like_params
-      params.permit(:post_id)
-    end
+
+  def like_params
+    params.permit(:post_id)
+  end
 end

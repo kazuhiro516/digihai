@@ -10,6 +10,8 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
+    <%# 本番環境でのみ使用するため %>
+    <%= analytics_init if Rails.env.production? %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/9ee9637e29.js" crossorigin="anonymous"></script>
   </head>
