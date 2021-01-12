@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user! , only: [:create]
+  before_action :authenticate_user!, only: [:create]
 
   def index
     @private_business_user = PrivateBusinessUser.find(params[:private_business_user_id])
@@ -14,10 +14,11 @@ class ReviewsController < ApplicationController
     else
       @private_business_user = PrivateBusinessUser.find(params[:id])
       render 'private_business_users/show'
+    end
   end
-end
 
-private
+  private
+
   def review_params
     params.require(:review).permit(:private_business_user_id, :score, :content)
   end

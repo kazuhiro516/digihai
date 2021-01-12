@@ -1,7 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
-
   protected
-  #ユーザー体験を向上させるためパスワードの入力を省略
+
+  # ユーザー体験を向上させるためパスワードの入力を省略
   def update_resource(resource, params)
     resource.update_without_current_password(params)
   end

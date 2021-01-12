@@ -1,5 +1,5 @@
 class PrivateBusinessUsersController < ApplicationController
-  before_action :authenticate_user! , only: [:show]
+  before_action :authenticate_user!, only: [:show]
 
   def index
     @private_business_users = PrivateBusinessUser.all.page(params[:page]).per(5)
