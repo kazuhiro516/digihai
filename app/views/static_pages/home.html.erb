@@ -8,7 +8,9 @@
     <hr class="my-4">
     <p>今すぐ募集を確認する。</p>
     <div class='loginBtn'>
-      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'btn btn-primary' %>
+      <%= link_to users_guest_sign_in_path, method: :post, class: 'btn btn-primary' do %>
+        <i class="fas fa-user-check"></i> ゲストログイン
+      <% end %>
     </div>
   </div>
 </div>
