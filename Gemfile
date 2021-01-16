@@ -35,6 +35,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-byebug'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -69,3 +71,4 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'google-analytics-rails', '1.1.1'
+gem 'rails-i18n', '~> 6.0.0'
