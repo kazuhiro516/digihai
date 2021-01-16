@@ -1,10 +1,16 @@
 <footer>
-  <ul class="footer-content">
-    <li>
-      Copyright © DIGIHAI
-    </li>
-    <li class="nav-item text-right ">
-      <%= link_to '利用規約', static_pages_terms_path, class: 'nav-link' %>
-    </li>
-  </ul>
+  <div class="foot-wrap">
+    <div class="footer-content">
+      <%= image_tag "logo1.png", width: "200px", height: "80px", class: "footer-logo" %>
+      <p>Copyright © DIGIHAI</p>
+    </div>
+      <ul class="footer-box">
+        <li class="nav-item">
+          <%= link_to "利用規約", static_pages_terms_path, class: "footer-nav" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "DIGIHAIについて", static_pages_about_path, class: "footer-nav" %>
+        </li>
+      </ul>
+  </div>
 </footer>
