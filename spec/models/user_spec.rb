@@ -1,7 +1,7 @@
 RSpec.describe User, type: :model do
   let(:user) { create(:user) }
 
-  describe '必須項目が入力されていないと新規登録できないことを確認' do
+  describe '必須項目が入力されていないと新規登録できないことを確認する' do
     it 'メールアドレス、名前、パスワードが有効な状態であること' do
       expect(user).to be_valid
     end
