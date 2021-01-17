@@ -1,14 +1,26 @@
-<% provide(:title, "ようこそ") %>
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="display-4">より簡単に。そしてよりよく。</h1>
-    <p class="lead">DIGIHAIは企業と配達員をつなぐ、マッチングサービスです。<br>
-    昨今のEC需要の増加、人手不足により配達員の負担は増加しています。<br>長時間労働、体力的負担の増加、サービス品質の低下、これらの問題の本質は、物量の増加にあります。<br>
-    DIGIHAIは、宅配事業の本質的課題である物量改善を目的に開発しました。</p>
-    <hr class="my-4">
-    <p>今すぐ募集を確認する。</p>
-    <div class='loginBtn'>
-      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'btn btn-primary' %>
+<% provide(:title, "デジハイ") %>
+<div class="container">
+  <div class="container-cover">
+    <h1 class="display-4">すぐわかる。すぐ見つかる。</h1>
+    <p class="lead">
+      DIGIHAIは、配達員の評価が一目でわかるレビューアプリです。<br>
+      宅配サービスの品質を高水準に保ち、<br>
+      マナークレームを少しでも抑えることを目的としています。
+    </p>
+    <p>今すぐレビューをみる</p>
+  </div>
+  <div class='loginBtn'>
+    <%= link_to users_guest_sign_in_path, method: :post, class: 'btn btn-primary' do %>
+      <i class="fas fa-user-check"></i> ゲストログイン
+    <% end %>
+  </div>
+  <h2 id="about">ABOUT</h2>
+  <div class="about">
+    <div class="col-6">
+      <%= render "review" %>
+    </div>
+    <div class="col-6">
+      <%= render "post" %>
     </div>
   </div>
 </div>

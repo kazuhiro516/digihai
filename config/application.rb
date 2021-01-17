@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Digihai
   class Application < Rails::Application
+    config.i18n.default_locale = :ja
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
@@ -18,14 +19,12 @@ module Digihai
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-  config.generators do |g|
-    g.test_framework :rspec,
-    fixtures: false,
-    view_specs: false,
-    helper_specs: false,
-    routing_specs: false,
-    controller_specs: false
+    config.generators do |g|
+      g.test_framework :rspec,
+      view_specs: false,
+      helper_specs: false,
+      routing_specs: false,
+      controller_specs: false
     end
-    config.i18n.default_locale = :ja
   end
 end
