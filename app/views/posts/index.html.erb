@@ -37,7 +37,7 @@
             <hr>
             <h3>【募集要項】</h3>
             <div class="row parts">
-              <span><%= post.content %></span>
+              <span><%= simple_format(post.content) %></span>
               <div class="show-btn">
                 <%= link_to(post_path(post)) do %>
                   <button class="btn btn-primary btn-lg btn-block"><i class="fas fa-angle-double-right"></i>詳細を確認する</button>
