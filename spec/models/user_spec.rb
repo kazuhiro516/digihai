@@ -24,11 +24,11 @@ RSpec.describe User, type: :model do
       expect(user.errors[:password]).to include('を入力してください')
     end
 
-    it '重複したメールアドレスだと無効な状態であること' do
+    it '重複しないメールアドレスだと有効な状態であること' do
       user
       user = User.new(email: 'testuser@gmail.com')
       user.valid?
-      expect(user.errors[:email]).to include('はすでに存在します')
+      expect(user.errors[:email]).not_to include('はすでに存在します')
     end
 
     it '名前の文字数が60字以上だと登録できないこと' do
