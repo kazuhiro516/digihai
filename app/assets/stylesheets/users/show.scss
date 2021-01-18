@@ -1,5 +1,8 @@
 .profile-wrap{
   margin:40px 0px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .round-img{
@@ -16,4 +19,8 @@
   padding: 0 26px;
   border-color: #dbdbdb;
   font-size: 14px;
+}
+
+.delete-btn{
+  text-align: right;
 }

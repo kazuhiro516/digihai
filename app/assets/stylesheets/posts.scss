@@ -5,14 +5,28 @@
   margin-right: 10px;
 }
 
+.cover{
+  background-color: white;
+  border-radius: 5px;
+  padding: 40px;
+}
+
 .card-img-top{
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
+   display: inline-block;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    margin: 5px;
+    width: auto;
+    height: auto;
+    border: 1px solid #ccc;
+    background-size: cover;
 }
 
 .card-wrap {
   margin: 40px 0px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .no-text-decoration:hover {
@@ -52,38 +66,11 @@
   color: #262626;
 }
 // 投稿詳細
-.post-wrap .col-md-8 {
-  padding: 0px;
+.card-show{
+  padding: 10px;
 }
 
-.card-right {
-  padding: 20px;
-}
-
-.card-right-name {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e6e6e6;
-  display: flex;
-}
-
-.card-right-comment {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e6e6e6;
-  height: 320px;
-  overflow: auto;
-}
-
-.postShow-wrap {
-  border: 1px solid #e6e6e6;
-  margin: 40px;
-}
-
-.post-user-name {
-  display: flex;
-  align-items: center;
-  line-height: 0;
-}
-
+// 削除アイコン
 .delete-post-icon {
   background-image: image-url("parts9");
   background-repeat: no-repeat;
@@ -92,7 +79,15 @@
   background-size: 20px !important;
   color: #262626;
   font-size: 20px;
+  margin-top: 20px;
 }
+
+.icon-list{
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+}
+
 // お気に入り
 .loved {
   background-image: image-url("parts7");
@@ -100,6 +95,7 @@
   height: 36px;
   width: 36px;
   background-size: 36px !important;
+  margin: 10px;
 }
 
 .hide-text {
@@ -107,6 +103,7 @@
   overflow: hidden;
   text-indent: 110%;
   white-space: nowrap;
+  margin: 10px;
 }
 // 詳細ボタン
 .btn-gradient-radius:focus{
@@ -116,4 +113,14 @@
 .show-btn{
   text-align: center;
   margin: 20px auto;
+}
+
+// userアイコン
+.user-icon{
+  margin-bottom: 10px;
+}
+
+.back-link-post{
+  padding-right: 25px;
+  text-align: right;
 }

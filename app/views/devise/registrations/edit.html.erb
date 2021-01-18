@@ -1,3 +1,4 @@
+<% provide(:title, @user.name) %>
 <div class="col-md-offset-2 mb-4 edit-profile-wrapper">
   <div class="row">
     <div class="col-md-8 mx-auto">
@@ -21,6 +22,12 @@
           </div>
           <%= f.submit "変更する", class: "btn btn-primary" %>
         <% end %>
+        <div class="back-link">
+          <%= link_to "プロフィールに戻る", user_path(@user) %>
+        </div>
+        <div class="delete-btn">
+          <%= link_to "アカウント削除","/users/#{@user}", class: "btn btn-outline-danger",method: :delete,data: {confirm: "本当に削除しますか?"} %>
+        </div>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
     </div>
     <div class="col-md-8">
       <div class="row">
-        <h1><%= @user.name %></h1>
+        <h1 class="my-4"><%= @user.name %></h1>
         <% if @user == current_user %>
           <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-primary" %>
         <% end %>
@@ -16,6 +16,9 @@
           <p>登録Eメール：<%= @user.email %></p>
         </div>
       <% end %>
+      <div class="back-link">
+        <%= link_to "一覧に戻る", users_path %>
+      </div>
     </div>
   </div>
 </div>
