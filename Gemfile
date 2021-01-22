@@ -72,3 +72,5 @@ gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'google-analytics-rails', '1.1.1'
 gem 'rails-i18n', '~> 6.0.0'
+gem "aws-sdk-s3", require: false
+gem 'fog-aws'
