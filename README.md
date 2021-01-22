@@ -41,20 +41,18 @@ https://digihai.herokuapp.com/
 * ログイン機能
 * ユーザー詳細機能
 * ユーザー編集機能
+* ユーザー削除機能
 * ページネーション機能
 
 # 開発環境
 ### 言語
 * Ruby version 2.7.2
-
 * JavaScript
-
-* Jquery
 
 ### フレームワーク
 * Ruby on Rails version 6.1.0
-
 * Bootstrap version 5.0.0.alpha3
+* Jquery
 
 ### ミドルウェア
 
@@ -66,6 +64,7 @@ https://digihai.herokuapp.com/
 
 ### インフラ
 * Heroku
+* AWS S3
 
 ### バージョン管理
 * Git
