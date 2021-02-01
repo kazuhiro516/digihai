@@ -33,6 +33,9 @@
       <div class="post-time"><%= time_ago_in_words(@post.created_at).upcase %>
         前
       </div>
+      <div class="entry-btn">
+        <button class="entry-in-btn"><i class="fas fa-arrow-alt-circle-right"></i>この求人に応募する</button>
+      </div>
       <hr>
       <div class="user-icon">
         <%= link_to user_path(@post.user), class: "no-text-decoration" do %>
