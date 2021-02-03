@@ -2,11 +2,6 @@
 <% if review.errors.any? %>
   <div class="notification is-danger">
     <h2><%= review.errors.count %>件のエラーがあります。</h2>
-    <ul>
-      <% review.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
   </div>
 <% end %>
 <div class="rating-box">
