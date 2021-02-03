@@ -6,7 +6,7 @@ DIGIHAIは、配達員の評価が一目でわかるレビューアプリです�
 宅配サービスの品質を高水準に保ち、マナークレームを少しでも抑えることを目的としています。
 
 ## アプリURL
-https://digihai.herokuapp.com/
+https://digihai.herokuapp.com/static_pages/home
 
 # 概要
 登録された配達員のレビューを閲覧したり、レビューを投稿できます。<br>
