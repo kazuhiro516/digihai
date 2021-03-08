@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 3b4d4342e7b394fc69c9783193f2d911255d3768
+  revision: 677ac8fd96213a188a5512cf3aa78c89f1fcda91
   branch: master
   specs:
     faker (2.16.0)
@@ -74,7 +74,7 @@ GEM
     autoprefixer-rails (10.2.4.0)
       execjs
     aws-eventstream (1.1.1)
-    aws-partitions (1.431.0)
+    aws-partitions (1.431.1)
     aws-sdk-core (3.112.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -144,7 +144,7 @@ GEM
     factory_bot_rails (6.1.0)
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
-    ffi (1.14.2)
+    ffi (1.15.0)
     fog-aws (3.9.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
