@@ -16,7 +16,7 @@
           </li>
           <li>
             <% if @post.user_id == current_user.id %>
-              <%= link_to post_path(@post), method: :delete, class: "ml-auto mx-0 my-auto", data: { confirm: '本当に削除しますか？' } do %>
+              <%= link_to post_path(@post), method: :delete, class: "ms-auto mx-0 my-auto", data: { confirm: '本当に削除しますか？' } do %>
                 <div class="delete-post-icon"></div>
               <% end %>
             <% end %>
