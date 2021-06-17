@@ -65,6 +65,13 @@
   text-decoration: none;
   color: #262626;
 }
+
+textarea {
+  resize: none;
+  width:300px;
+  height:300px;
+}
+
 // 投稿詳細
 .card-show{
   padding: 10px;
