@@ -14,6 +14,8 @@
     <%= analytics_init if Rails.env.production? %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/9ee9637e29.js" crossorigin="anonymous"></script>
+    <%= javascript_pack_tag 'hello_vue' %>
+    <%= stylesheet_pack_tag 'hello_vue'  %>
   </head>
   <body>
     <div id="wrapper">
