@@ -1,26 +1,28 @@
 <% provide(:title, "デジハイ") %>
-<div class="container">
-  <div class="container-cover">
-    <h1 class="display-4">すぐわかる。すぐ見つかる。</h1>
-    <p class="lead">
-      DIGIHAIは、配達員の評価が一目でわかるレビューアプリです。<br>
-      宅配サービスの品質を高水準に保ち、<br>
-      マナークレームを少しでも抑えることを目的としています。
-    </p>
-    <p>今すぐレビューをみる</p>
-  </div>
-  <div class='loginBtn'>
-    <%= link_to users_guest_sign_in_path, method: :post, class: 'btn btn-primary' do %>
-      <i class="fas fa-user-check"></i> ゲストログイン
-    <% end %>
-  </div>
-  <h2 id="about">ABOUT</h2>
-  <div class="about">
-    <div class="col-6">
-      <%= render "review" %>
+<div id="hello">
+  <div class="container">
+    <div class="container-cover">
+      <h1 v-bind:class="textStyle">すぐわかる。すぐ見つかる。</h1>
+      <p class="lead">
+        DIGIHAIは、配達員の評価が一目でわかるレビューアプリです。<br>
+        宅配サービスの品質を高水準に保ち、<br>
+        マナークレームを少しでも抑えることを目的としています。
+      </p>
+      <p>今すぐレビューをみる</p>
     </div>
-    <div class="col-6">
-      <%= render "post" %>
+    <div class='loginBtn'>
+      <%= link_to users_guest_sign_in_path, method: :post, class: 'btn btn-primary' do %>
+        <i class="fas fa-user-check"></i> ゲストログイン
+      <% end %>
+    </div>
+    <h2 id="about">ABOUT</h2>
+    <div class="about">
+      <div class="col-6">
+        <%= render "review" %>
+      </div>
+      <div class="col-6">
+        <%= render "post" %>
+      </div>
     </div>
   </div>
 </div>
