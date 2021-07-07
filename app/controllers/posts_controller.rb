@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
   def index
     # N+1問題を解消するため、投稿に紐づくidを取得する処理
-    @posts = Post.includes(:photos, :user).order('created_at DESC').page(params[:page]).per(3)
+    @posts = Post.preload(:photos, :user).order('created_at DESC').page(params[:page]).per(3)
   end
 
   def show

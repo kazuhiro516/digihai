@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#hello',
     data: {
-      message: "Can you say hello?"
+      textStyle: 'display-4'
     },
     components: { App }
   })
